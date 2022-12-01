@@ -1,7 +1,7 @@
 import re
 
-str = ['docexamplebucket1', 'blog-delivery-march-2020..','xn--aa', 'a', 'ss-s3alias']
-x = [re.search('(?!(^xn--|.+-s3alias$))(?!.*[.]{2})^[a-z0-9][a-z0-9-.]{1,61}[a-z0-9]$', y) for y in str]
+strs = ['docexamplebucket1', 'blog-delivery-march-2020..','xn--aa', 'a', 'ss-s3alias']
+x = [re.search('(?!(^xn--|.+-s3alias$))(?!.*[.]{2})^[a-z0-9][a-z0-9-.]{1,61}[a-z0-9]$', y) for y in strs]
 #(?!(^xn--|.+-s3alias$)) ไม่ขึ้นต้นด้วย xn-- และไม่ลงท้ายด้วย -s3alias
 #(?!.*[.]{2}) ไม่มีจุดสองจุดติดกัน 
 #^[a-z0-9][a-z0-9-.]{1,61}[a-z0-9]$ ขึ้นต้นและลงท้ายด้วยตัวอักษรหรือตัวเลข, มีตัวอักษรพิมพ์เล็ก ตัวเลข จุดและขีดกลาง, ความยาว 3-63 
